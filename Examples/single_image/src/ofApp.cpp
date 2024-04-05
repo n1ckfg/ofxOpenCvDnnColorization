@@ -5,8 +5,8 @@ void ofApp::setup(){
     img.load(ofToDataPath("monochrome.jpg"));
     ofSetWindowShape(img.getWidth()*2, img.getHeight());
     colorization.setNetworkImageSize(224, 224);
-    colorization.setup(ofToDataPath("colorization_deploy_v2.prototxt"),
-                   ofToDataPath("colorization_release_v2.caffemodel"));
+    colorization.setup(ofToDataPath("dnn/colorization_deploy_v2.prototxt"),
+                   ofToDataPath("dnn/colorization_release_v2.caffemodel"));
     colorization.update(img.getPixels());
 }
 

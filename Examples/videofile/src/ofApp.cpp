@@ -5,8 +5,8 @@ void ofApp::setup(){
     video.load(ofToDataPath("aquarium.mp4"));
     ofSetWindowShape(video.getWidth(), video.getHeight()*2);
     colorization.setNetworkImageSize(226, 226);
-    colorization.setup(ofToDataPath("colorization_deploy_v2.prototxt"),
-                       ofToDataPath("colorization_release_v2.caffemodel")
+    colorization.setup(ofToDataPath("dnn/colorization_deploy_v2.prototxt"),
+                       ofToDataPath("dnn/colorization_release_v2.caffemodel")
                        );
     video.play();
 }

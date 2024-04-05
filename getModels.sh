@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 set -euxo pipefail
-path_to_cfg="https://raw.githubusercontent.com/richzhang/colorization/master/colorization/models/colorization_deploy_v2.prototxt"
-path_to_weights="http://eecs.berkeley.edu/~rich.zhang/projects/2016_colorization/files/demo_v2/colorization_release_v2.caffemodel"
+
+#path_to_cfg="https://raw.githubusercontent.com/richzhang/colorization/master/colorization/models/colorization_deploy_v2.prototxt"
+#path_to_weights="http://eecs.berkeley.edu/~rich.zhang/projects/2016_colorization/files/demo_v2/colorization_release_v2.caffemodel"
+
+path_to_cfg="https://raw.githubusercontent.com/alexellis/faas-colorization/master/function/models/colorization_deploy_v2.prototxt"
+path_to_weights="https://www.dropbox.com/s/dx0qvhhp5hbcx7z/colorization_release_v2.caffemodel?dl=1"
+
 if wget ${path_to_weights}; then
 	echo "downloading caffemodel"
 else

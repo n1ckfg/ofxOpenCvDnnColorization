@@ -129,9 +129,9 @@ void ofxOpenCvDnnColorization::setup(string _path_to_cfg, string _path_to_weight
     // setup additional layers:
     int sz[] = {2, 313, 1, 1};
     const Mat pts_in_hull(4, sz, CV_32F, hull_pts);
-    Ptr<dnn::Layer> class8_ab = net.getLayer("class8_ab");
+    cv::Ptr<dnn::Layer> class8_ab = net.getLayer("class8_ab");
     class8_ab->blobs.push_back(pts_in_hull);
-    Ptr<dnn::Layer> conv8_313_rh = net.getLayer("conv8_313_rh");
+    cv::Ptr<dnn::Layer> conv8_313_rh = net.getLayer("conv8_313_rh");
     conv8_313_rh->blobs.push_back(Mat(1, 313, CV_32F, Scalar(2.606)));
     
     
